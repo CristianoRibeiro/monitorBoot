@@ -1,0 +1,151 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Painel de Controle de Dicas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form class="form" [formGroup]="form" novalidate>
+    <ion-slides>
+
+      <ion-slide padding>
+        <h1>INFORMAÇÕES SOBRE A SALA</h1>
+        <ion-item>
+          <ion-label>NOME DA SALA:</ion-label>
+          <ion-input formControlName="nome" type="text" placeholder="Digite o nome da sala"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>TIPO DA SALA:</ion-label>
+          <ion-select formControlName="sala">
+            <ion-option *ngFor="let sala of salas" [value]="sala.id">{{sala.nome}}</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>NÚMERO DA SALA:</ion-label>
+          <ion-input formControlName="numeroSala" type="text" placeholder="Digite o número da sala"></ion-input>
+        </ion-item>
+
+        <button ion-button class="btn-proximo" (click)="avancar()">AVANÇAR</button>
+      </ion-slide>
+
+      <ion-slide padding>
+        <h1>GRUPO DE DICAS 1</h1>
+        <ion-item>
+          <ion-label>Título da Dica 1:</ion-label>
+          <ion-input formControlName="grupo1dica1titulo" type="text" placeholder="Título da dica 1"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Texto da Dica 1:</ion-label>
+          <ion-textarea formControlName="grupo1dica1texto" cols="20" rows="5" placeholder="Texto da dica 1"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Título da Dica 2:</ion-label>
+          <ion-input formControlName="grupo1dica2titulo" type="text" placeholder="Título da dica 2"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Texto da Dica 2:</ion-label>
+          <ion-textarea formControlName="grupo1dica2texto" cols="20" rows="5" placeholder="Texto da dica 2"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Título da Dica 3:</ion-label>
+          <ion-input formControlName="grupo1dica3titulo" type="text" placeholder="Título da dica 3"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Texto da Dica 3:</ion-label>
+          <ion-textarea formControlName="grupo1dica3texto" cols="20" rows="5" placeholder="Texto da dica 3"></ion-textarea>
+        </ion-item>
+
+        <button ion-button class="btn-proximo" (click)="avancar()">AVANÇAR</button>
+        <button ion-button class="btn-anterior" (click)="voltar()">VOLTAR</button>
+      </ion-slide>
+
+      <ion-slide padding>
+        <h1>GRUPO DE DICAS 2</h1>
+        <ion-item>
+          <ion-label>Título da Dica 1:</ion-label>
+          <ion-input formControlName="grupo2dica1titulo" type="text" placeholder="Título da dica 1"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Texto da Dica 1:</ion-label>
+          <ion-textarea formControlName="grupo2dica1texto" cols="20" rows="5" placeholder="Texto da dica 1"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Título da Dica 2:</ion-label>
+          <ion-input formControlName="grupo2dica2titulo" type="text" placeholder="Título da dica 2"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Texto da Dica 2:</ion-label>
+          <ion-textarea formControlName="grupo2dica2texto" cols="20" rows="5" placeholder="Texto da dica 2"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Título da Dica 3:</ion-label>
+          <ion-input formControlName="grupo2dica3titulo" type="text" placeholder="Título da dica 3"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Texto da Dica 3:</ion-label>
+          <ion-textarea formControlName="grupo2dica3texto" cols="20" rows="5" placeholder="Texto da dica 3"></ion-textarea>
+        </ion-item>
+
+        <button ion-button class="btn-proximo" (click)="avancar()">AVANÇAR</button>
+        <button ion-button class="btn-anterior" (click)="voltar()">VOLTAR</button>
+      </ion-slide>
+
+      <ion-slide padding>
+        <h1>GRUPO DE DICAS 3</h1>
+        <ion-item>
+          <ion-label>Título da Dica 1:</ion-label>
+          <ion-input formControlName="grupo3dica1titulo" type="text" placeholder="Título da dica 1"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Texto da Dica 1:</ion-label>
+          <ion-textarea formControlName="grupo3dica1texto" cols="20" rows="5" placeholder="Texto da dica 1"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Título da Dica 2:</ion-label>
+          <ion-input formControlName="grupo3dica2titulo" type="text" placeholder="Título da dica 2"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Texto da Dica 2:</ion-label>
+          <ion-textarea formControlName="grupo3dica2texto" cols="20" rows="5" placeholder="Texto da dica 2"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Título da Dica 3:</ion-label>
+          <ion-input formControlName="grupo3dica3titulo" type="text" placeholder="Título da dica 3"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Texto da Dica 3:</ion-label>
+          <ion-textarea formControlName="grupo3dica3texto" cols="20" rows="5" placeholder="Texto da dica 3"></ion-textarea>
+        </ion-item>
+
+        <button ion-button full class="btn-salvar" (click)="salvar()">SALVAR</button>
+
+      </ion-slide>
+
+    </ion-slides>
+
+
+
+  </form>
+
+</ion-content>

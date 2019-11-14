@@ -1,0 +1,28 @@
+page-final-derrota {
+  .wrapper {
+    @include centerer;
+    width: 80%;
+    h1 {
+      font-family: 'Montserrat-Bold';
+      color: map-get($colors, primary);
+      text-align: center;
+      &:first-child {
+        font-size: 70px;
+        margin: 0;
+      }
+      &:nth-child(2) {
+        font-size: 50px;
+        margin-top: 0;
+      }
+    }
+    h2 {
+      font-family: 'Montserrat-Bold';
+      color: white;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .button {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+page-dicas {
+  ion-grid {
+    position: absolute;
+    top: 55% !important;
+  }
+  .contador {
+    background-color: #4b4b4b;
+    @include centerer;
+    .counter-status {
+      width: 100px;
+      white-space: normal;
+      font-size: 15px;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 15px;
+      @include centerer;
+    }
+  }
+  .c100 {
+    &::after {
+      background-color: #343434 !important;
+    }
+  }
+  .contador-dicas {
+    @include centerer;
+    top: 85%;
+    h1 {
+      color: map-get($colors, primary);
+      font-weight: 900;
+      font-size: 7rem !important;
+      font-family: "Montserrat-Bold";
+    }
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-top: -20px;
+      margin-left: 60px;
+    }
+  }
+  .box-glow {
+    box-shadow: 0 0 30px map-get($colors, primary);
+  }
+}

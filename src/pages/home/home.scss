@@ -1,0 +1,13 @@
+page-home {
+  .start-button {
+    @include centerer;
+    height: 200px;
+    width: 200px;
+    transition: all .5s;
+    &:active {
+      opacity: .5;
+      height: 190px;
+      width: 190px;
+    }
+  }
+}

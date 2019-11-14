@@ -1,0 +1,12 @@
+<ion-content padding>
+
+  <ion-buttons right>
+    <button ion-button clear icon-only class="panic-button" (click)="enterAdmin()">
+          <ion-icon name="md-settings" color="danger"></ion-icon>
+        </button>
+  </ion-buttons>
+
+  <div class="start-button" [ngClass]="{'glow-effect': hasClicked}" (click)="startGame()">
+    <img src="assets/img/logo_60.png" alt="Logo-60-Minutos">
+  </div>
+</ion-content>

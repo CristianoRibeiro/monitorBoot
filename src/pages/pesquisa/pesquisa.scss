@@ -1,0 +1,33 @@
+page-pesquisa {
+  .list {
+    @include centerer;
+    width: 75%;
+    h1 {
+        font-weight: 900 !important;
+        margin-bottom: 50px;
+    }
+    .item {
+      background-color: transparent;
+      border: none !important;
+      .label {
+        color: white;
+        font-size: 2rem !important;
+        font-weight: 500 !important;
+      }
+      .icon {
+        color: map-get($colors, primary);
+        font-size: 5rem;
+      }
+    }
+    .button {
+        font-weight: 900;
+        font-size: 2rem;
+        margin-top: 50px;
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+  }
+  .item-inner {
+    border: none !important;
+  }
+}

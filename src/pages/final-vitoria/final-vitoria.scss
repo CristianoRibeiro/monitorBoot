@@ -1,0 +1,19 @@
+page-final-vitoria {
+  .wrapper {
+    @include centerer;
+    h1 {
+      font-size: 80px;
+      font-family: 'Montserrat-Bold';
+      color: map-get($colors, primary);
+      text-align: center;
+    }
+    h2 {
+      font-family: 'Montserrat-Bold';
+      color: white;
+      text-align: center;
+    }
+    .button {
+        margin-top: 20px;
+    }
+  }
+}

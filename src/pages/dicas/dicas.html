@@ -1,0 +1,32 @@
+<ion-content padding>
+
+  <ion-buttons right>
+    <button ion-button clear icon-only class="panic-button" (click)="killGame()">
+          <ion-icon name="md-power" color="danger"></ion-icon>
+        </button>
+  </ion-buttons>
+
+  <painel-dicas #painelDicas [dicas]="dicasAtivas" (onExpandirDica)="onExpandirDica($event)"></painel-dicas>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let crono of cronoArr; let index = index">
+        <div class="container" [ngClass]="{'glow-effect-alternate': crono.disponivel}" (click)="mostrarDicas(crono, index)">
+          <div class="c100 contador box-glow" [ngClass]="crono.fillClass">
+            <span class="counter-status">{{crono.statusDicas}}</span>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="contador-dicas">
+    <h1>{{3 - dicasExpandidas.length}} DICAS</h1>
+    <h2>RESTANTES</h2>
+  </div>
+
+</ion-content>

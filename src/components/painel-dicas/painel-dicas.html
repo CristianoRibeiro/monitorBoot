@@ -1,0 +1,18 @@
+<div class="list-wrapper">
+
+  <ion-list *ngIf="dicas && dicas.length > 0">
+    <button ion-item detail-none class="item-dica" *ngFor="let dica of dicas; let i = index" (click)="expandirDica(dica, i)">
+
+      <button ion-button icon-only clear item-right class="btn-fechar" *ngIf="dica.active" (click)="fecharDica(dica, $event)"> 
+          <ion-icon name="md-close"></ion-icon>
+        </button>
+
+      <span class="dica-titulo">{{dica.titulo}}</span>
+
+      <div class="dica-descricao" [ngClass]="{'visible' : dica.active}">
+        <p [innerHTML]="dica.descricao"></p>
+      </div>
+    </button>
+  </ion-list>
+
+</div>
