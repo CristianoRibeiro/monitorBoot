@@ -26,9 +26,9 @@ export class DicasPage {
   @ViewChild('painelDicas') painelDicas;
 
   timesDica = [
-    ((60 * 1000) * 5),
     ((60 * 1000) * 15),
-    ((60 * 1000) * 25)
+    ((60 * 1000) * 30),
+    ((60 * 1000) * 45)
   ];
   finalTime = ((60 * 1000) * 30);
 
