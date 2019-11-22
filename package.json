@@ -20,7 +20,7 @@
     "@angular/http": "5.0.3",
     "@angular/platform-browser": "5.0.3",
     "@angular/platform-browser-dynamic": "5.0.3",
-    "@ionic-native/core": "4.4.0",
+    "@ionic-native/core": "^4.20.0",
     "@ionic-native/native-audio": "^4.5.3",
     "@ionic-native/splash-screen": "4.4.0",
     "@ionic-native/status-bar": "4.4.0",
@@ -41,7 +41,7 @@
     "zone.js": "0.8.18"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "3.1.8",
+    "@ionic/app-scripts": "^3.2.4",
     "typescript": "2.4.2"
   },
   "description": "An Ionic project",
@@ -55,8 +55,8 @@
       "cordova-plugin-nativeaudio": {}
     },
     "platforms": [
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }

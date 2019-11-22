@@ -30,7 +30,7 @@ export class DicasPage {
     ((60 * 1000) * 30),
     ((60 * 1000) * 45)
   ];
-  finalTime = ((60 * 1000) * 30);
+  finalTime = ((60 * 1000) * 60);
 
   constructor(
     public navCtrl: NavController,
